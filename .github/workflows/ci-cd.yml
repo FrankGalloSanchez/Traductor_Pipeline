@@ -52,7 +52,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build . -t frankgallosanchez23/traducto_actions:latest
+          docker build -t frankgallosanchez23/traducto_actions:latest .
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
