@@ -24,7 +24,7 @@ jobs:
 
       - name: Build JAR
         run: |
-          ./mvnw clean package -e || { echo 'Maven build failed'; exit 1; }
+          ./mvnw clean package -e -X || { echo 'Maven build failed'; exit 1; }
 
       - name: List Surefire reports
         run: ls -al target/surefire-reports/
