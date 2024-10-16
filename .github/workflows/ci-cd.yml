@@ -12,18 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3  # Actualizado a la versión más reciente
+      - uses: actions/checkout@v3  # Usando la versión más reciente
         with:
           fetch-depth: 0
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v3  # Actualizado a la versión más reciente
+        uses: actions/setup-java@v3  # Usando la versión más reciente
         with:
           java-version: '17'
           distribution: 'zulu'
 
       - name: Cache Maven packages
-        uses: actions/cache@v3  # Actualizado a la versión más reciente
+        uses: actions/cache@v3  # Usando la versión más reciente
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -42,7 +42,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Actualizado a la versión más reciente
+        uses: actions/checkout@v3  # Usando la versión más reciente
 
       - name: List target directory
         run: ls -la target
